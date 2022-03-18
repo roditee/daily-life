@@ -19,6 +19,7 @@ import Home from './components/Home';
 function App() {
   return (
     <div className='App'>
+      
       <h1>인덱스 페이지</h1>
       <Link to="/">[홈]</Link> &nbsp;
       <Link to="login">[로그인]</Link> &nbsp;
