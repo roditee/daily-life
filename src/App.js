@@ -23,7 +23,7 @@ import HBOpen from './components/HBOpen';
 import HBPast from './components/HBPast';
 // 행복 저금통 게시글 ----------------------------------
 import HBBoardList from './components/HBBoardList';
-import HBBoardListItem from './components/HBBoardListItem ';
+import HBBoardListItem from './components/HBBoardListItem';
 import HBBoardInsert from './components/HBBoardInsert';
 import HBBoardDetail from './components/HBBoardDetail';
 
