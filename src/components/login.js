@@ -1,6 +1,6 @@
 import React from 'react';
 
-function login(props) {
+function Login(props) {
   return (
     <div>
       <h1>Hello World</h1>
@@ -8,4 +8,4 @@ function login(props) {
   );
 }
 
-export default login;
+export default Login;
