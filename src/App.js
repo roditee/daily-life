@@ -13,19 +13,19 @@ import IndexBottom from './components/IndexBottom';
 // 글귀 게시판 -------------------------------------------
 import BoardList from './components/BoardList';
 import BoardListItem from './components/BoardListItem';
-import BoardInsert from './components/BoardListItem';
+import BoardInsert from './components/BoardInsert';
 import BoardUpdate from './components/BoardUpdate';
-// import BoardDetail from './components/BoardDetail';
+import BoardDetail from './components/BoardDetail';
 // 행복 저금통--------------------------------------------
 import HBList from './components/HBList';
 import HBCreate from './components/HBCreate';
 import HBOpen from './components/HBOpen';
 import HBPast from './components/HBPast';
 // 행복 저금통 게시글 ----------------------------------
-// import HbBoardList from './components/HbBoardList';
-// import HbBoardListItem from './components/HbBoardListItem ';
-// import HbBoardInsert from './components/HbBoardInsert';
-// import HbBoardDetail from './components/HbBoardDetail';
+import HBBoardList from './components/HBBoardList';
+import HBBoardListItem from './components/HBBoardListItem ';
+import HBBoardInsert from './components/HBBoardInsert';
+import HBBoardDetail from './components/HBBoardDetail';
 
 
 
@@ -51,10 +51,10 @@ function App() {
       <Link to="HBOpen">[저금통 개봉하기]</Link>&nbsp;
       <Link to="HBPast">[지난 저금통 보기]</Link> <hr/>
 
-      <Link to="HbBoardList">[행복저금통 게시글 목록 조회]</Link>&nbsp;
-      <Link to="HbBoardListItem">[행복저금통 게시글 아이템]</Link>&nbsp;
-      <Link to="HbBoardInsert">[행복저금통 게시글 글쓰기]</Link>&nbsp;
-      <Link to="HbBoardDetail">[행복저금통 게시글 상세 정보 조회]</Link>&nbsp;
+      <Link to="HBBoardList">[행복저금통 게시글 목록 조회]</Link>&nbsp;
+      <Link to="HBBoardListItem">[행복저금통 게시글 아이템]</Link>&nbsp;
+      <Link to="HBBoardInsert">[행복저금통 게시글 글쓰기]</Link>&nbsp;
+      <Link to="HBBoardDetail">[행복저금통 게시글 상세 정보 조회]</Link>&nbsp;
 
 
 
@@ -73,17 +73,17 @@ function App() {
         <Route path="/BoardListItem" element={<BoardListItem/>} />
         <Route path="/BoardInsert" element={<BoardInsert/>} />
         <Route path="/BoardUpdate" element={<BoardUpdate/>} />
-        {/* <Route path="/BoardDetail" element={<BoardDetail/>} /> */}
+        <Route path="/BoardDetail" element={<BoardDetail/>} />
 
         <Route path="/HBList" element={<HBList/>} />
         <Route path="/HBCreate" element={<HBCreate />} />
         <Route path="/HBOpen" element={<HBOpen/>} />
         <Route path="/HBPast" element={<HBPast/>} />
 
-        {/* <Route path="/HbBoardList" element={<HbBoardList/>} />
-        <Route path="/HbBoardListItem" element={<HbBoardListItem/>} />
-        <Route path="/HbBoardInsert" element={<HbBoardInsert/>} />
-        <Route path="/HbBoardDetail" element={<HbBoardDetail/>} /> */}
+        <Route path="/HBBoardList" element={<HBBoardList/>} />
+        <Route path="/HBBoardListItem" element={<HBBoardListItem/>} />
+        <Route path="/HBBoardInsert" element={<HBBoardInsert/>} />
+        <Route path="/HBBoardDetail" element={<HBBoardDetail/>} />
       </Routes>
     </div>
   );
