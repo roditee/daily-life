@@ -17,20 +17,22 @@ import WriteHappyBank from './components/WriteHappyBank';
 function App() {
   return (
     <div className='App'>
+      <h1>인덱스 페이지</h1>
+
       <Routes>
-         <Route path="/bottom" element={<Bottom/>} />
-         <Route path="/join" element={<Join/>} />
-         <Route path="/listBoard" element={<ListBoard/>} />
-         <Route path="/ListHappyBank" element={<ListHappyBank/>} />
-         <Route path="/login" element={<Login />} />
-         <Route path="/myPage" element={<MyPage/>} />
-         <Route path="/nav" element={<Nav/>} />
-         <Route path="/openHappyBank" element={<OpenHappyBank/>} />
-         <Route path="/pastHappyBank" element={<PastHappyBank/>} />
-         <Route path="/top" element={<Top/>} />
-         <Route path="/updateBoard" element={<UpdateBoard/>} />
-         <Route path="/writeBoard" element={<WriteBoard/>} />
-         <Route path="/writeHappyBank" element={<WriteHappyBank/>} />
+        <Route path="/bottom" element={<Bottom/>} />
+        <Route path="/join" element={<Join/>} />
+        <Route path="/listBoard" element={<ListBoard/>} />
+        <Route path="/ListHappyBank" element={<ListHappyBank/>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/myPage" element={<MyPage/>} />
+        <Route path="/nav" element={<Nav/>} />
+        <Route path="/openHappyBank" element={<OpenHappyBank/>} />
+        <Route path="/pastHappyBank" element={<PastHappyBank/>} />
+        <Route path="/top" element={<Top/>} />
+        <Route path="/updateBoard" element={<UpdateBoard/>} />
+        <Route path="/writeBoard" element={<WriteBoard/>} />
+        <Route path="/writeHappyBank" element={<WriteHappyBank/>} />
       </Routes>
     </div>
   );
