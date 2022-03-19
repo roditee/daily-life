@@ -24,12 +24,12 @@ const HBBoardList = () => {
     }, []);
 
     return (
-    <div>
-        <h3>저금통 게시글 전체 목록 조회</h3>
-        { data.map(function (hb_board, i) {
-        return <HBBoardListItem hb_board={hb_board} key={i} />
-        })}
-    </div>
+        <div>
+            <h3>저금통 게시글 전체 목록 조회</h3>
+            { data.map(function (hb_board, i) {
+                return <HBBoardListItem hb_board={hb_board} key={i} />
+            })}
+        </div>
     )
 }
 

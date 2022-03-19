@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './BoardListItem.css';
 
 function BoardListItem(props) {
     let history = useNavigate();
@@ -21,15 +22,20 @@ function BoardListItem(props) {
     }
 
     return (
-        <div>
-            <Link to={"/boardDetail/" + props.board.bNo}>{props.board.bNo}</Link>
-            {props.board.memEmail}
-            {props.board.bTitle}
-            {props.board.bContent}
-            {props.board.bWriteDate}
-            {props.board.feelNo}
-            <Link to={"/boardUpdate/" + props.board.bNo}>수정</Link>
-            <button onClick={onDeleteItem}>삭제</button>
+        <div className='boardListItem'>
+            <Link to={"/boardDetail/" + props.board.bNo}>
+                <div className='boardItem'>
+                    <h3>(제목){props.board.bTitle}</h3>
+                    <p>(내용){props.board.bContent}</p>
+                    (기분번호){props.board.feelNo}<br/>
+                    (기분타입명){props.board.feelType}<br/>
+                    (작성자이메일){props.board.memEmail}<br/>
+                    (작성자닉네임){props.board.memNick}<br/>
+                    (작성일){props.board.bWriteDate}<br/>
+                    <Link to={"/boardUpdate/" + props.board.bNo}>수정</Link><br/>
+                    <button onClick={onDeleteItem}>삭제</button>
+                </div>
+            </Link>
         </div>
     );
 };
