@@ -14,7 +14,9 @@ const BoardDetail = (props) => {
         bTitle: '',
         bContent: '',
         bWriteDate: '',
-        feelNo: ''
+        feelNo: '',
+        memNick: '',
+        feelType: ''
     });
 
     const [loading, setLoading] = useState(false);
@@ -31,7 +33,9 @@ const BoardDetail = (props) => {
             bTitle: response.data.bTitle,
             bContent: response.data.bContent,
             bWriteDate: response.data.bWriteDate,
-            feelNo: response.data.feelNo
+            feelNo: response.data.feelNo,
+            memNick: response.data.memNick,
+            feelType: response.data.feelType
         });
         setLoading(false);
     }
@@ -48,8 +52,10 @@ const BoardDetail = (props) => {
             글 번호 : {bNo}<br/>
             제목 : {board.bTitle}<br/>
             내용 : {board.bContent}<br/>
-            기분 : {board.feelNo}<br/>
-            작성자 : {board.memEmail}<br/>
+            기분번호 : {board.feelNo}<br/>
+            기분타입명 : {board.feelType}<br/>
+            작성자 이메일 : {board.memEmail}<br/>
+            작성자 닉네임 : {board.memNick}<br/>
             작성일 : {board.bWriteDate}<br/>
             <hr/>
         </div>

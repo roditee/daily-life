@@ -15,7 +15,10 @@ const HBBoardDetail = () => {
         hb_bContent: '',
         hb_bWriteDate: '',
         feelNo: '',
-        hbNo: ''
+        hbNo: '',
+        memNick: '',
+        feelType: '',
+        hbName: ''
     });
 
     const [loading, setLoading] = useState(false);
@@ -33,7 +36,10 @@ const HBBoardDetail = () => {
             hb_bContent: response.data.hb_bContent,
             hb_bWriteDate: response.data.hb_bWriteDate,
             feelNo: response.data.feelNo,
-            hbNo: response.data.hbNo
+            hbNo: response.data.hbNo,
+            memNick: response.data.memNick,
+            feelType: response.data.feelType,
+            hbName: response.data.hbName
         });
         setLoading(false);
     }
@@ -50,10 +56,13 @@ const HBBoardDetail = () => {
             글 번호 : {hb_bNo}<br/>
             제목 : {hb_board.hb_bTitle}<br/>
             내용 : {hb_board.hb_bContent}<br/>
-            기분 : {hb_board.feelNo}<br/>
-            작성자 : {hb_board.memEmail}<br/>
+            기분번호 : {hb_board.feelNo}<br/>
+            기분타입 : {hb_board.feelType}<br/>
+            작성자이메일 : {hb_board.memEmail}<br/>
+            작성자닉네임 : {hb_board.memNick}<br/>
             작성일 : {hb_board.hb_bWriteDate}<br/>
             행복저금통번호 : {hb_board.hbNo}<br/>
+            행복저금통이름 : {hb_board.hbName}<br/>
             <hr/>
         </div>
     );
