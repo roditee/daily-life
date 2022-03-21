@@ -1,0 +1,56 @@
+.loginAllForm{
+    background-color: #f9f4ed;
+}
+
+.socialLoginList {
+    padding: 30px 0px 30px 0px;
+}
+
+.loginForm {
+    padding-bottom: 15px;
+}
+
+
+.loginEmailBox {
+    padding-bottom: 10px;
+}
+
+.joinEmail{
+    height: 22px;
+    width: 140px;
+}
+
+.joinEmailText{
+    height: 22px;
+    width: 140px;
+}
+
+.joinEmailSelect{
+    height: 28px;
+    width: 140px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 2px;
+    color: rgb(112 80 68);
+    text-align: center;
+    font-size: 14px;
+}
+
+.pw {
+    height: 22px;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+input::placeholder{
+    color: rgb(112 80 68);
+    text-align: center;
+    font-size: 15px;
+}
+
+button{
+    border: 0;
+    color: #84695e;
+    border-radius: 5px;
+    background: white;
+}
