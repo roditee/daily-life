@@ -1,61 +1,150 @@
 import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import './Login.css';
-
+import $ from 'jquery';
+import {Helmet} from "react-helmet";
 function Login(props) {
+
+  const onClickbtn = () => {
+    console.log('click login')
+    
+  }
+  function check(){
+    let id = document.querySelector('#id')
+    let pw = document.querySelector('#pw')
+    let btn = document.querySelector('#btn')
+    let label = document.querySelectorAll('label')
+
+    btn.addEventListener('click', () => {
+        if(id.value == "") {
+            label = id.nextElementSibling
+            label.classList.add('warning')
+            setTimeout(() => {
+                label.classList.remove('warning')
+            }, 1500)
+        } else if(pw.value == "") {
+            label = pw.nextElementSibling
+            label.classList.add('warning')
+            setTimeout(() => {
+                label.classList.remove('warning')
+            }, 1500)
+        }
+    })
+}
+
+
+//   var btn = function(e) {
+//     let id = document.querySelector("#id");
+//     let pw = document.querySelector("#pw");
+//     let btn = document.querySelector("#btn");
+
+    
+//     if(id.value=""){
+//            id.nextElementSibling('label');
+//            id.classList.add("warning");
+//          }
+//          else if (pw.value=""){
+//            pw.nextElementSibling('label');
+//            pw.classList.add("warning");
+//          }
+        
+// }
+
+  
+
+  // let id = $('#id');
+  // let pw = $('#pw');
+  // let btn = $('#btn');
+
+  // $(btn).on('click', function() {
+  //   if($(id).val() == ""){
+  //     $(id).next('label').addClass('warning');
+  //     setTimeout(function() {
+  //       $('label').removeClass('warning');
+  //     }, 1500);
+  //   }
+  //   else if($(pw).val() == "")
+  //   $(pw).next('label').addClass('warning');   
+  //   setTimeout(function() {
+  //       $('label').removeClass('warning');
+  //     }, 1500);
+  // });
+  
+  
+  // var id = document.querySelector("#id");
+  // var pw = document.querySelector("#pw");
+  // var btn = document.querySelector("#btn");
+
+  // document.querySelector("#btn").addEventListener("click", (e) => {
+  //   if(id.value=""){
+  //     id.nextElementSibling('label');
+  //     id.classList.add("warning");
+  //   }
+  //   else if (pw.value=""){
+  //     pw.nextElementSibling('label');
+  //     pw.classList.add("warning");
+  //   }
+  // });
+  
+
+  
+
   return (
     <div>
-      <div className="loginAllForm">
-        <h1>로그인</h1>
-          <div className="loginTopBox">
-            <form className="loginForm">
-              <div className="loginBox">
-                <div className='loginEmailBox'>
-                  <input type='text' maxLength='15' className="joinEmail"/>
-                  <span class="a">@</span>
-                  <input type="text" className="joinEmailText"></input>
-                  <select className='joinEmailSelect'>
-                          <option value='write'> 직접 입력 </option>
-                          <option value='gmail.com'> gmail.com </option>
-                          <option value='naver.com'> naver.com </option>
-                          <option value="daum.com">daum.com</option>
-                  </select>
-                </div>
-                <div>
-                  <input type="password" className="pw" placeholder='비밀번호'></input>
-                </div>
-                <div className='loginBtnForm'>
-                  <button type="submit">로그인할래요</button><button><Link to = '/'>로그인안할래요</Link></button>
-                </div>
-              </div>
-            </form> 
-              <div className="forgetMsg">
-                <Link to = '/login'>아이디/비밀번호 찾을래요</Link>&nbsp;&nbsp;|&nbsp;&nbsp;<Link to = '/join'>회원가입 할래요</Link>
-              </div> 
-          </div> 
-
-          
-          <div className="loginBottomBox">	
-            <div className="box">
-              <div className="socialLoginBox">
-                <h1>소셜 로그인</h1>
-                  <div className="socialLoginList">
-                    <div>
-                      <button className="kakaoLoginButton"><span>KakaoTalk ID 로그인 안돼요</span></button>
-                    </div>
-                    <div>
-                      <button className="googleLoginButton"><span>Google ID 로그인 안되요</span></button>
-                    </div>
-                    <div>
-                      <button className="naverLoginButton"><span>Naver ID 로그인 안되?돼?</span></button>
-                    </div>
-                  </div>
-              </div>
-            </div>
+      
+      <div className='body2'>
+      <section className='login-form'>
+        <h1>LOGIN</h1>
+        <form action=''>
+          <div className='int-area'>
+          <input type='text' className='id' id='id' autoComplete='off' required/>
+              <label for='id'>USER NAME</label>
           </div>
+          <div className='int-area'>
+          <input type='password' className='pw' id='pw' autoComplete='off' required/>
+              <label for='pw'>PASSWORD</label>
+          </div>
+          <div className='btn-area'>
+              <button id="btn" type="submit" onClick={check}>LOGIN</button>
+          </div>
+        </form>
+        <div className='caption'>
+          <a href=''>Forgot Password?</a>
+        </div>
+      </section>
+
+     
+{/* 
+      <Helmet>
+        <script>
+          let id = $('#id');
+          let pw = $('#pw');
+          let btn = $('#btn');
+
+          $(btn).on('click', function() {
+            if($(id).val() == ""){
+              $(id).next('label').addClass('warning');
+              setTimeout(function() {
+                $('label').removeClass('warning');
+              }, 1500);
+            }
+            else if($(pw).val() == "")
+            $(pw).next('label').addClass('warning');   
+            etTimeout(function() {
+                $('label').removeClass('warning');
+              }, 1500);
+          });
+          
+        </script> 
+      </Helmet> */}
+
+
       </div>
+     
     </div>
   );
+
+  
 }
 
 export default Login;
