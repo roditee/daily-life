@@ -36,6 +36,7 @@ function Join() {
             memInfo: ''
         })
   };
+  
 
   const onSubmit = (e) => {
         e.preventDefault();
