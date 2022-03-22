@@ -1,9 +1,9 @@
 .hbBoardListItem {
-  width: 500px;
-  height: 300px;
-  background-color: rgb(184, 184, 184);
+  width: 340px;
+  height: 415px;
   display: inline-block;
   margin: 5px;
+  border-radius: 7px;
 }
 
 .hbBoardListItem * {
@@ -12,5 +12,36 @@
 .hbBoardItem {
   height: 100%;
   width: 100%;
-  color: white;
+  color: black;
+}
+
+.hbFeelIcon {
+  height: 170px;
+}
+
+.hbFeelIcon > img {
+  height: 130px;
+  margin-top: 30px;
+}
+
+.hbContents {
+  height: 250px;
+  padding: 27px 30px 0 30px;
+}
+
+.hbTitle > h3 {
+  font-size: 20px;
+}
+
+.hbText {
+  margin: 15px 0;
+}
+
+.hbInfo {
+}
+
+.hbBRD {
+}
+
+.hbFT {
 }

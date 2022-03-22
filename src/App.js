@@ -19,22 +19,49 @@ import BoardDetail from './components/BoardDetail';
 // 행복 저금통--------------------------------------------
 import HBList from './components/HBList';
 import HBCreate from './components/HBCreate';
-// import HBUpdate from './HBUpdate';
+import HBUpdate from './components/HBUpdate';
 import HBOpen from './components/HBOpen';
 // 행복 저금통 게시글 ----------------------------------
 import HBBoardList from './components/HBBoardList';
 import HBBoardListItem from './components/HBBoardListItem';
 import HBBoardInsert from './components/HBBoardInsert';
 import HBBoardDetail from './components/HBBoardDetail';
+import { useState, useEffect } from 'react';
+import axios from '../node_modules/axios/index';
 
 
 
 function App() {
+
+  // state
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  // 서버에 요청해서 데이터 받아옴
+  // state 값 저장
+  const loadData = async () => {
+    setLoading(true);
+    const response = await axios.get('http://localhost:8080/home');
+    console.log(response.data);
+    setData(response.data.boardList);
+    setLoading(false);
+  }
+
+  // 렌더링할 때마다 호출 
+    // 빈배열 : loadData() 한 번만 호출
+    useEffect(() => {
+      loadData();
+  }, []);
+
+
+  console.log(data)
+
+
   return (
     <div className='App'>
       <IndexNav></IndexNav>
       <h1>인덱스 페이지</h1>
-      <Link to="/">[홈]</Link> &nbsp; <hr/>
+      <Link to="/home">[홈]</Link> &nbsp; <hr/>
 
       <Link to="Login">[로그인]</Link> &nbsp;
       <Link to="Join">[회원가입]</Link>&nbsp;
@@ -59,7 +86,7 @@ function App() {
 
 
       <Routes>
-        <Route path="/" element={<Home/>} />
+        <Route path="/home" element={<Home data={data}/>} />
 
         <Route path="/Join" element={<Join/>} />
         <Route path="/Login" element={<Login />} />
@@ -77,7 +104,7 @@ function App() {
 
         <Route path="/HBList" element={<HBList/>} />
         <Route path="/HBCreate" element={<HBCreate />} />
-        {/* <Route path="/HBUpdate" element={<HBUpdate />} /> */}
+        <Route path="/HBUpdate/:hbNo" element={<HBUpdate />} />
         <Route path="/HBOpen" element={<HBOpen/>} />
 
         <Route path="/HBBoardList" element={<HBBoardList/>} />
