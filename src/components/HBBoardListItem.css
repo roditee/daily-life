@@ -2,8 +2,13 @@
   width: 340px;
   height: 415px;
   display: inline-block;
-  margin: 5px;
+  margin: 13px;
   border-radius: 7px;
+  box-shadow: 6px 7px 5px 1px #e7e7e7;
+}
+
+.hbBoardListItem:hover {
+  box-shadow: 6px 7px 5px 1px #d4d1d1;
 }
 
 .hbBoardListItem * {
