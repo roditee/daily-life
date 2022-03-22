@@ -93,17 +93,19 @@ const HBBoardDetail = () => {
 
     return (
             <div className='hbBDetailBox' style={bgColor}>
-                <div className='hbBTitle'>
-                    <h1>"{hb_board.hb_bTitle}"</h1>
-                </div>
-                <div className='hbBInfo'>
-                    '{hb_board.feelType}'&nbsp;이 가득했던 날&nbsp;|&nbsp;&nbsp;{hb_board.hb_bWriteDate}
-                </div>
-                <div className='hbBContentBox'>
-                    <p className='hbBContent'>{hb_board.hb_bContent}</p>
-                </div>
-                <div className='hbBankInfo'>
-                    {hb_board.hbName}
+                <div className='hbBDetailLine'>
+                    <div className='hbBTitle'>
+                        <h1>"{hb_board.hb_bTitle}"</h1>
+                    </div>
+                    <div className='hbBInfo'>
+                        '{hb_board.feelType}'&nbsp;이 가득했던 날&nbsp;|&nbsp;&nbsp;{hb_board.hb_bWriteDate}
+                    </div>
+                    <div className='hbBContentBox'>
+                        <p className='hbBContent'>{hb_board.hb_bContent}</p>
+                    </div>
+                    <div className='hbBankInfo'>
+                        {hb_board.hbName}
+                    </div>
                 </div>
             </div>
     );

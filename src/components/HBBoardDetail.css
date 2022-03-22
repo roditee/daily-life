@@ -4,6 +4,13 @@
   margin: 0 auto;
   width: 630px;
   box-shadow: 6px 7px 5px 1px #e7e7e7;
+  padding: 25px 0;
+}
+
+.hbBDetailLine {
+  border: solid 4px white;
+  width: 570px;
+  margin: 0 auto;
 }
 
 .hbBTitle > h1 {
