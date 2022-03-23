@@ -85,9 +85,9 @@ function App() {
         <Route path="/HBUpdate/:hbNo" element={<HBUpdate />} />
         <Route path="/HBOpen" element={<HBOpen/>} />
 
-        <Route path="/HBBoardList" element={<HBBoardList/>} />
+        <Route path="/HBBoardList/:hbNo" element={<HBBoardList/>} />
         <Route path="/HBBoardListItem" element={<HBBoardListItem/>} />
-        <Route path="/HBBoardInsert" element={<HBBoardInsert/>} />
+        <Route path="/HBBoardInsert/:hbNo" element={<HBBoardInsert/>} />
         <Route path="/HBBoardDetail/:hb_bNo" element={<HBBoardDetail/>} />
 
         <Route path="/IntroduceIcon" element={<IntroduceIcon/>} />
