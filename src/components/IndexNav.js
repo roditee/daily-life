@@ -40,27 +40,27 @@ function IndexNav() {
     const [show, show2] = useState(false);
   
 
-    const scrollNavbar = ()=>{
-        console.log(window.scrollY)
-        let scroll = parseInt(window.scrollY)
-        if(scroll > 0) {
-        show2(true)
-        }
-        else {
-        show2(false)
-        }
-    }
+    // const scrollNavbar = ()=>{
+    //     console.log(window.scrollY)
+    //     let scroll = parseInt(window.scrollY)
+    //     if(scroll > 0) {
+    //     show2(true)
+    //     }
+    //     else {
+    //     show2(false)
+    //     }
+    // }
 
-    useEffect(()=>{
-        window.addEventListener('scroll', scrollNavbar)
-        return ()=>window.removeEventListener("scroll", scrollNavbar)
-    }, [show])
+    // useEffect(()=>{
+    //     window.addEventListener('scroll', scrollNavbar)
+    //     return ()=>window.removeEventListener("scroll", scrollNavbar)
+    // }, [show])
 
 
   return (
     <>
-      <nav className={`navbar ${show && 'scrollNav'}`}
->
+      {/* <nav className={`navbar ${show && 'scrollNav'}`}> */}
+      <nav className='navbar'>
             <div className = 'navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                 DAILY-LIFE
