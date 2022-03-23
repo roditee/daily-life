@@ -36,7 +36,7 @@ function BoardInsert(props) {
             .then(
                 response => {
                     alert("등록 완료");
-                    history('/boardList'); // 게시글 전체 목록 조회 화면으로 이동
+                    history('/'); // 게시글 전체 목록 조회 화면으로 이동
                 }
             );
     }
