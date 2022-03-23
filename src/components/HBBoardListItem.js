@@ -2,15 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './HBBoardListItem.css';
-//
-import Modal from 'react-modal';
-//
 
 const HBBoardListItem = (props) => {
-
-    //
-    const [modalIsOpen, setModalIsOpen] = useState(false);
-    //
 
     let history = useNavigate();
     
@@ -77,13 +70,6 @@ const HBBoardListItem = (props) => {
                     </div>
                 </div>
             </Link>
-
-            {/*  */}
-            <button onClick={()=> setModalIsOpen(true)}>Modal Open</button>
-            <Modal className='modal' isOpen={false} onRequestClose={() => setModalIsOpen(false)}>
-                This is Modal content
-            </Modal>
-
         </div>
     );
 };
