@@ -3,9 +3,9 @@ import axios from 'axios';
 import BoardListItem from './BoardListItem';
 import Banner from './Banner';
 import './BoardList.css';
+import { useSelector } from 'react-redux';
 
 function BoardList() {
-
   
 
   // state
