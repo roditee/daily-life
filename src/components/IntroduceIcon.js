@@ -37,19 +37,19 @@ const IntroduceIcon = () => {
                 </div>
                 <div className='iconItem'>
                     <div className='iconTxtBox'>
-                        <h3 className='iconName'>비실이</h3>
+                        <h3 className='iconName'>척척이</h3>
                         <p className='iconDetail'>뿌듯의 아이콘.<br/>주어진 일은 무엇이든 해내는 척척박사.</p>
                     </div>
                 </div>
                 <div className='iconItem'>
                     <div className='iconTxtBox'>
-                        <h3 className='iconName'>시몬스/시몬이</h3>
+                        <h3 className='iconName'>시몬이</h3>
                         <p className='iconDetail'>편안의 아이콘.<br/>시몬스에서 내려온 지 얼마 되지 않아 이 세상 모든 것이 편안하다.</p>
                     </div>
                 </div>
                 <div className='iconItem'>
                     <div className='iconTxtBox'>
-                        <h3 className='iconName'>별똥이/별뚱이</h3>
+                        <h3 className='iconName'>별똥이</h3>
                         <p className='iconDetail'>축하의 아이콘.<br/>바다에서 올라온 지 얼마 되지 않아 육지의 모든 것이 신기하고 재미있다.</p>
                     </div>
                 </div>
