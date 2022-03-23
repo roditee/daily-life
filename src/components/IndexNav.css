@@ -1,16 +1,16 @@
 .navbar {
   height: 420px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   font-size: 1.2rem;
-  position: sticky;
   top: 0;
   z-index: 999;
   color: #e39764;
   background-image: url("/public/img/Banner.png");
   background-size: cover;
-  transition: all 0.4s;
+  transition: all 0.2s;
+  position: fixed;
 }
 
 .scrollNav {
@@ -37,14 +37,9 @@
   align-items: center;
 }
 
-.fa-typo3 {
-  margin-left: 0.5rem;
-  font-size: 1.8rem;
-}
-
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(5, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;

@@ -43,7 +43,7 @@ function IndexNav() {
     const scrollNavbar = ()=>{
         console.log(window.scrollY)
         let scroll = parseInt(window.scrollY)
-        if(scroll >= 100) {
+        if(scroll > 0) {
         show2(true)
         }
         else {
@@ -75,6 +75,11 @@ function IndexNav() {
                         <Link to='/' className='nav-links' onClick = {closeMobileMenu}>
                             홈
                         </Link>
+                    </li>
+                    <li className='nav-item'>
+                    <Link to='IntroduceIcon' className='nav-links' onClick = {closeMobileMenu}>
+                        소개
+                    </Link>
                     </li>
                     <li className='nav-item'>
                         <Link to='BoardInsert' className='nav-links' onClick = {closeMobileMenu}>
