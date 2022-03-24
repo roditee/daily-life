@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from "axios";
 import moment from "../../node_modules/moment/moment";
 import './HBList.css';
+import './HBListItem.css';
 
 // 한 행
 function HBListItem(props) {
@@ -41,20 +42,22 @@ function HBListItem(props) {
 
 
     return (
-        <Link to={"/HBBoardList/"+ props.HB.hbNo} onClick={dateCheck}>
-            <div className="hb">
-            <h5>Daily-Life</h5>
-            {/* <tr>{props.HB.hbNo}</tr> */}
-            <h4>{props.HB.hbName}</h4>
-            {/* <tr>{props.HB.hbStartDate}</tr> */}
-            <p>{props.HB.hbEndDate}</p>
-            {/* <tr>{props.HB.memEmail}</tr> */}
+        <div className="hbBListItem">
+            <Link to={"/HBBoardList/"+ props.HB.hbNo} onClick={dateCheck}>
+                <div className="hb">
+                <h5>Daily-Life</h5>
+                {/* <tr>{props.HB.hbNo}</tr> */}
+                <h4>{props.HB.hbName}</h4>
+                {/* <tr>{props.HB.hbStartDate}</tr> */}
+                <p>{props.HB.hbEndDate}</p>
+                {/* <tr>{props.HB.memEmail}</tr> */}
+                </div>
+            </Link>
             <div className="btnDiv">
-            <Link to={"/HBBoardInsert/" + props.HB.hbNo}><input type="submit" className='btn1' value="행복담기" /></Link>
-            <Link to={"/HBUpdate/" + props.HB.hbNo}><input type="submit" className='btn2' value="수정" /></Link>
+                <Link to={"/HBBoardInsert/" + props.HB.hbNo}><input type="submit" className='btn1' value="행복담기" /></Link>
+                <Link to={"/HBUpdate/" + props.HB.hbNo}><input type="submit" className='btn2' value="수정" /></Link>
             </div>
-            </div>
-        </Link>
+        </div>
     );
 }
 
