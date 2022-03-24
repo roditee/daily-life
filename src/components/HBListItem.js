@@ -49,6 +49,7 @@ function HBListItem(props) {
                 <Link to={"/HBBoardInsert/" + props.HB.hbNo}><input type="submit" className='btn1' value="행복담기" /></Link>
                 <Link to={"/HBUpdate/" + props.HB.hbNo}><input type="submit" className='btn2' value="수정" /></Link>
               </div>
+            </div>
           </div>
     );
 }
