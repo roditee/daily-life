@@ -99,3 +99,22 @@ section h1 {
     -webkit-transform: rotate(-4deg);
   }
 }
+.hbCreateBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.hbCreate {
+  width: 250px;
+  height: 300px;
+  display: inline-block;
+
+  margin: 50px;
+  padding-top: 130px;
+  padding-right: 50px;
+
+  background-image: url("/public/img/HB_null.png");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
