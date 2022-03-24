@@ -146,12 +146,8 @@ const BoardUpdate = () => {
                         </tr>
                         <tr>
                             {/* <td>내용</td> */}
-                            <td> <input
-                                type="text"
-                                name="bContent"
-                                className='bContentText'
-                                value={board.bContent}
-                                onChange={onChange} />
+                            <td>
+                                <textarea className='bContentText' name="bContent" value={board.bContent} onChange={onChange}></textarea>
                             </td>
                         </tr>
                         <tr>
