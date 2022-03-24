@@ -39,9 +39,8 @@ function HBList(props) {
             <section>
                 <div className='hbCreateBox'>
                     <Link to="../HBCreate" >
-                        <div className='hbCreate'>
-
-                        </div>
+                        <div className='hbCreate'></div>
+                        <h3>저금통 등록하기</h3>
                     </Link>
                     <div>
                         <h1>행복 저금통 목록</h1>
